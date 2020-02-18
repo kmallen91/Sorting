@@ -9,7 +9,6 @@ def selection_sort(arr):
         for j in range(i+1, len(arr)):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
-
             # TO-DO: swap
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
 
