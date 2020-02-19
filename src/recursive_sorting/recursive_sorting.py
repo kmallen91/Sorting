@@ -48,17 +48,21 @@ def merge_sort(arr):
     if n < 2:
         return
     # split the array in half and overwrite our two new arrays
-    for i in range(0, mid-1):
-        left[i] = arr[i]
-    for i in range(mid, n-1):
-        right[i] = arr[i]
+    for i in range(0, n-1):
+        if i < mid:
+            left[i] = arr[i]
+        else:
+            right[i] = arr[i]
     merge_sort(left)
     merge_sort(right)
     merge(left, right)
     return arr
 
 
+print(merge_sort([0, 3, 1, 2, 9, 5, 4]))
 # STRETCH: implement an in-place merge sort algorithm
+
+
 def merge_in_place(arr, start, mid, end):
     # TO-DO
 
